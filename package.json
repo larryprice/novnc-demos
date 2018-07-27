@@ -1,0 +1,18 @@
+{
+  "name": "noVNC-demos",
+  "version": "0.1.0",
+  "description": "noVNC demo app for plain JS and React",
+  "main": "index.js",
+  "dependencies": {
+    "@novnc/novnc": "^1.0.0",
+    "express": "^4.16.3",
+    "novnc-core": "^0.2.1",
+    "watchify": "^3.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Larry Price <self@larry-price.com>",
+  "license": "MIT"
+}
