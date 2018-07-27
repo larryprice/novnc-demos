@@ -10,13 +10,20 @@
       body,h1 {font-family: "Raleway", sans-serif}
       body, html {height: 100%}
       .bgimg {
-          background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+          background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
           min-height: 100%;
           background-position: center;
           background-size: cover;
       }
+      label {
+          width: 180px;
+          clear: left;
+          text-align: right;
+          padding-right: 10px;
+      }
+      label, input {float: left}
     </style>
-    <script type='text/javascript' src='/bundle.js'></script>
+    <script type="text/javascript" src="/bundle.js"></script>
   </head>
   <body>
     <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
@@ -24,9 +31,19 @@
         VNC Demo (simple)
       </div>
       <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">CHANGE ME TO A FORM</h1>
-        <hr class="w3-border-grey" style="margin:auto;width:40%">
-        <p class="w3-large w3-center">and somehow display the VNC afterwards</p>
+        <h1 class="w3-jumbo w3-animate-top">Connect with VNC</h1>
+        <form>
+          <label for="connectionString">
+            URL
+          </label>
+          <input type="text" name="connectionString" />
+          <label for="password">
+            Password
+          </label>
+          <input type="password" name="password" />
+          <label>&nbsp</label>
+          <input type="submit" value="Connect" />
+        </form>
       </div>
     </div>
   </body>
