@@ -6,10 +6,10 @@ const browserify = require('browserify');
 const watchify = require('watchify');
 
 const b = browserify({entries: ['client/custom-vnc.js'], cache: {}, packageCache: {}, plugin: [watchify]})
-const bundle = () => b.bundle().pipe(fs.createWriteStream('public/bundle.js'))
+const bundle = () => b.bundle().on('error', console.error).pipe(fs.createWriteStream('public/bundle.js'))
 
 b.on('update', bundle);
-bundle();
+bundle()
 
 app.use(express.static('public'))
 app.listen(4000, () => console.log('noVNC simple app listening on port 4000'))

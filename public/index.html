@@ -10,17 +10,26 @@
       body,h1 {font-family: "Raleway", sans-serif}
       body, html {height: 100%}
       .bgimg {
-          background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
-          min-height: 100%;
-          background-position: center;
-          background-size: cover;
+        background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
       }
       label {
-          width: 180px;
-          clear: left;
-          text-align: right;
-          padding-right: 10px;
+        width: 180px;
+        clear: left;
+        text-align: right;
+        padding-right: 10px;
       }
+      #noVNC-canvas {
+        width: 80%;
+        margin-left: 10%;
+        transform: translateY(10%);
+      }
+      @media(max-height: 1080px) { #noVNC-canvas { height: 810px; } }
+      @media(max-height: 810px) { #noVNC-canvas { height: 520px; } }
+      @media(max-height: 520px) { #noVNC-canvas { height: 432px; } }
+      .hidden { display: none; }
       label, input {float: left}
     </style>
     <script type="text/javascript" src="/bundle.js"></script>
@@ -30,21 +39,24 @@
       <div class="w3-display-topleft w3-padding-large w3-xlarge">
         VNC Demo (simple)
       </div>
-      <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">Connect with VNC</h1>
-        <form>
-          <label for="connectionString">
-            URL
-          </label>
-          <input type="text" name="connectionString" />
-          <label for="password">
-            Password
-          </label>
-          <input type="password" name="password" />
-          <label>&nbsp</label>
-          <input type="submit" value="Connect" />
-        </form>
+      <div id="connect-setup">
+        <div class="w3-display-middle">
+          <h1 class="w3-jumbo w3-animate-top">Connect with VNC</h1>
+          <form id="connect-form">
+            <label for="connectionString">
+              URL
+            </label>
+            <input type="text" name="connectionString" />
+            <label for="password">
+              Password
+            </label>
+            <input type="password" name="password" />
+            <label>&nbsp</label>
+            <input type="submit" value="Connect" />
+          </form>
+        </div>
       </div>
+      <div id="noVNC-canvas" class="hidden" />
     </div>
   </body>
 </html>
