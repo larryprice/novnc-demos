@@ -11,10 +11,9 @@ const disconnect = () => {
   rfb = null
 }
 
-const connect = (address, password) => {
+const connect = (address) => {
   try {
-    rfb = new RFB(document.getElementById('noVNC-canvas'), `ws://${address}`,
-      {credentials: {password}})
+    rfb = new RFB(document.getElementById('noVNC-canvas'), `ws://${address}`)
     rfb.addEventListener('connect', () => console.debug(`Connected to ${address}`))
     rfb.addEventListener('disconnect', disconnect)
     rfb.scaleViewport = rfb.resizeSession = true
@@ -27,7 +26,7 @@ window.addEventListener('DOMContentLoaded', e => {
   document.getElementById('disconnect-btn').addEventListener('click', disconnect)
   document.getElementById('connect-form').addEventListener('submit', e => {
     e.preventDefault()
-    connect(e.target[0].value, e.target[1].value)
+    connect(e.target[0].value)
     document.getElementById('connect-setup').classList.add('hidden')
     document.getElementById('connected-view').classList.remove('hidden')
   })
