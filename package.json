@@ -2,10 +2,18 @@
   "name": "noVNC-demos",
   "version": "0.1.0",
   "description": "noVNC demo app for plain JS and React",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larryprice/react-demos.git"
+  },
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.3",
     "novnc-core": "^0.2.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-novnc": "^0.1.0",
+    "reactify": "^1.1.1",
     "watchify": "^3.11.0"
   },
   "devDependencies": {},
