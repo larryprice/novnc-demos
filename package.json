@@ -12,7 +12,7 @@
     "novnc-core": "^0.2.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-novnc": "^0.1.0",
+    "react-novnc": "^0.1.1",
     "reactify": "^1.1.1",
     "watchify": "^3.11.0"
   },
