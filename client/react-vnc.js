@@ -105,7 +105,6 @@ class VncController extends React.Component {
     return (
       <div id='react-noVNC-demo'>
         <NoVNC connectionName={this.state.connectionName} onDisconnected={this.onDisconnected}
-          onPasswordRequired={this.onPasswordRequired}
           actionsBar={(props) => <Actions onDisconnect={props.onDisconnect} />}
           passwordPrompt={(props) => <Password onSubmit={props.onSubmit} />}/>
       </div>
