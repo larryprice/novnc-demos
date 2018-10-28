@@ -4,7 +4,7 @@ let rfb = null
 const disconnect = (e) => {
   if (!rfb) return
 
-  if (!e.detail || e.detail.clean) {
+  if (e.type === 'click' || !e.detail || e.detail.clean) {
     console.debug(`Disconnecting from ${rfb._url}`)
     rfb.disconnect()
   }
